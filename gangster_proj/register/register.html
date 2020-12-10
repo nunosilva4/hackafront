@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        modelType="text/css">
+    <script modelType="application/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/1cdfb820ae.js"></script>
+    <link rel="stylesheet" href="/register/register.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h3>Fill your details to start ruling the streets!</h3>
+            </div>
+        </div>
+        <div class="register">
+            <form class="register-form">
+                <div class="register-field">
+                    <label class="register-label">Street Name(aka): </label>
+                    <input class="register-input" type="text" placeholder="Street Name" field="*{streetName}"/>
+                    <span th:if="${#fields.hasErrors('streetName')}" th:errors="*{streetName}">
+                    <!--Street Name field error messages-->
+                    </span>
+                </div>
+                <div class="register-field">
+                    <label class="register-label">Real Name: </label>
+                    <input class="register-input" type="text" placeholder="Real Name" field="*{realName}"/>
+                    <span th:if="${#fields.hasErrors('realName')}" th:errors="*{firstName}">
+                    <!--Real Name field error messages-->
+                    </span>
+                </div>
+                <div class="register-field">
+                    <label class="register-label">E-mail: </label>
+                    <input class="register-input" type="text" placeholder="E-mail" field="*{email}"/>
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+                    <!--E-mail field error messages-->
+                    </span>
+                </div>
+                <div class="register-field">
+                    <label class="register-label">Password: </label>
+                    <input class="register-input" type="text" placeholder="Password" field="*{password}"/>
+                    <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
+                    <!--Password field error messages-->
+                    </span>
+                </div>
+                <div>
+                    <input class="submit-btn" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div class="back-to-landing">
+            <button class="btn">Cancel Registration</button>
+        </div>
+    </div>
+</body>
