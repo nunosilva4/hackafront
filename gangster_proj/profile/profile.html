@@ -12,7 +12,8 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/1cdfb820ae.js"></script>
-    <link rel="stylesheet" href="./profile.css"/>
+    <link rel="stylesheet" href="./profile.css" />
+    <script src="profile.js" defer ></script>
 </head>
 
 <body>
@@ -47,27 +48,34 @@
 
         <div class="profile-header">
             <div class="profile-image-avatar">
-                <img src="/resources/Yakuza_F_1.png" width="100"/>
+                <img src="/gangster_proj/resources/avatars/yakuza/Yakuza_F_1.png" width="100" />
             </div>
 
-            <h3 class="name">Name</h3>
+            <h3 class="name">Gangstar</h3>
 
             <div class="status">
                 <ul class="status-list">
                     <span>
-                        <li class="crew">My crew</li>
-
+                        <div class="crewDiv">
+                            <h4 class="crew">My crew<h4>
+                            <button id="crew-btn" class="crew-name">Yakuza</button>
+                        </div>
                     </span>
                     <span>
-                        <li class="rep">My rep</li>
+                        <div class="repDiv">
+                            <h4 class="rep">My rep</h4>
+                            <h5 class="gangster-rep">1235</h5>
+                        </div>
                     </span>
 
                 </ul>
             </div>
         </div>
+        <br>
+        <br>
 
         <div class="gangster-actions">
-            <button class="btn">Mug</button>
+            <button id="mugbtn" class="btn">Mug</button>
             <button class="btn">Hide from Popo</button>
             <button class="btn"> <i class="fa fa-comment"></i> Chat with crew</button>
         </div>
@@ -91,25 +99,25 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -12,52 +12,265 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/1cdfb820ae.js"></script>
-    <link rel="stylesheet" href="/register/register.css" />
+    <link rel="stylesheet" href="/gangster_proj/register/register.css" />
+    <script src="register.js" defer></script>
 </head>
-<body>
+
+<body id="body">
+
     <div class="container">
         <div class="header">
             <div class="title">
                 <h3>Fill your details to start ruling the streets!</h3>
             </div>
         </div>
-        <div class="register">
+        <div id="register" class="register">
             <form class="register-form">
                 <div class="register-field">
-                    <label class="register-label">Street Name(aka): </label>
-                    <input class="register-input" type="text" placeholder="Street Name" field="*{streetName}"/>
-                    <span th:if="${#fields.hasErrors('streetName')}" th:errors="*{streetName}">
-                    <!--Street Name field error messages-->
-                    </span>
+                    <label class="register-label">Street Name: </label>
+                    <input id="street-name-input" class="register-input" type="text" placeholder="Street Name" />
                 </div>
                 <div class="register-field">
                     <label class="register-label">Real Name: </label>
-                    <input class="register-input" type="text" placeholder="Real Name" field="*{realName}"/>
-                    <span th:if="${#fields.hasErrors('realName')}" th:errors="*{firstName}">
-                    <!--Real Name field error messages-->
-                    </span>
+                    <input id="real-name-input" class="register-input" type="text" placeholder="Real Name" />
                 </div>
                 <div class="register-field">
                     <label class="register-label">E-mail: </label>
-                    <input class="register-input" type="text" placeholder="E-mail" field="*{email}"/>
-                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
-                    <!--E-mail field error messages-->
-                    </span>
+                    <input id="email-input" class="register-input" type="text" placeholder="E-mail" />
                 </div>
                 <div class="register-field">
                     <label class="register-label">Password: </label>
-                    <input class="register-input" type="text" placeholder="Password" field="*{password}"/>
-                    <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
-                    <!--Password field error messages-->
-                    </span>
+                    <input id="password-input" class="register-input" type="text" placeholder="Password" />
                 </div>
                 <div>
-                    <input class="submit-btn" type="submit" value="Submit">
+                    <input id="submit-btn" class="submit-btn" type="submit" value="Submit">
                 </div>
             </form>
         </div>
+
+        <div id="select" class="select">
+            <form>
+                <div class="crew1">
+                    <div class="profile-image-avatar">
+                        <img src="/gangster_proj/resources/Los Vagos Crew Logo.png" width="100">
+                        <h3 class="title">Los Vagos</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="crew2">
+                    <div class="profile-image-avatar">
+                        <img src="/gangster_proj/resources/Yardie Crew Logo.png" width="100">
+                        <h3>The Yardies</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="crew3">
+                    <div class="profile-image-avatar">
+                        <img src="/gangster_proj/resources/Blood Crew Logo.png" width="100">
+                        <h3>The Bloods</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="crew4">
+                    <div class="profile-image-avatar">
+                        <img src="/gangster_proj/resources/Yakuza Crew Logo.png" width="100">
+                        <h3>Yakuza</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="crew5">
+                    <div class="profile-image-avatar">
+                        <img src="/gangster_proj/resources/Aryan Resistance Logo.png" width="100">
+                        <h3>Aryan Brotherhood</h3>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="avatar1">
+            <div>
+                <h1 class="title-avatar">
+                    Pick your Female Avatar
+                </h1>
+            </div>
+            <div class="container">
+                <form>
+                <div class="avatar-container">
+                    <img id = "vfemale1" src ="/gangster_proj/resources/avatars/losvagos/LV_Female_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "vfemale2" src ="/gangster_proj/resources/avatars/losvagos/LV_Female_2.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "vfemale3" src ="/gangster_proj/resources/avatars/losvagos/LV_Female_3.png">
+                </div>
+                </form>
+            </div>
+
+            <div class="title-avatar"> 
+                <h1>Pick your Male Avatar</h1>
+            </div>
+
+            <div class="container">
+                <form>
+                <div class="avatar-container">
+                    <img id = "vmale1" src ="/gangster_proj/resources/avatars/losvagos/LV_Male_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "vmale2" src ="/gangster_proj/resources/avatars/losvagos/LV_Male_2.png">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="avatar2">
+
+            <div>
+                <h1 class="title-avatar">
+                    Pick your Female Avatar
+                </h1>
+            </div>
+            <div class="container">
+                <form>
+                <div class="avatar-container">
+                    <img id = "yfemale1" src ="/gangster_proj/resources/avatars/yardies/Yardie_Female_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "yfemale2" src ="/gangster_proj/resources/avatars/yardies/Yardie_Female_2.png">
+                </div>
+                </form>
+            </div>
+            <div class="container">
+                <div class="title-avatar"> 
+                    <h1> Pick your Male Avatar</h1>
+                </div>
+                <form>
+                <div class="avatar-container">
+                    <img id = "ymale1" src ="/gangster_proj/resources/avatars/yardies/Yardie_Male_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "ymale2" src ="/gangster_proj/resources/avatars/yardies/Yardie_Male_2.png">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="avatar3">
+
+            <div class="title-avatar">
+                <h1>Pick your Female Avatar</h1>
+            </div>
+            <div class="container">
+                <form>
+                <div class="avatar-container">
+                    <img id = "bfemale1" src ="/gangster_proj/resources/avatars/bloods/Bloods_Female_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "bfemale2" src ="/gangster_proj/resources/avatars/bloods/Bloods_Female_2.png">
+                </div>
+                </form>
+            </div>
+            <div class="container">
+                <div class="title-avatar"> 
+                    <h1>Pick your Male Avatar</h1>
+                </div>
+                <form>
+                <div class="avatar-container">
+                    <img id = "bmale1" src ="/gangster_proj/resources/avatars/bloods/Bloods_Male_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "bmale1" src ="/gangster_proj/resources/avatars/bloods/Bloods_Male_2.png">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="avatar4">
+
+            <div>
+                <h1 class="title-avatar">
+                    Pick your Female Avatar
+                </h1>
+            </div>
+            <div class="container">
+                <form>
+                <div class="avatar-container">
+                    <img id="yfemale1" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_F_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "yfemale2" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_F_2.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "yfemale3" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_F_3.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "yfemale4" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_F_4.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "yfemale5" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_F_5.png">
+                </div>
+                </form>
+            </div>
+            <div class="container">
+                <div class="title-avatar"> 
+                    <h1> Pick your Male Avatar</h1>
+                </div>
+                <form>
+                <div class="avatar-container">
+                    <img id = "ymale1" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_M_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "ymale2" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_M_2.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "ymale3" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_M_3.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "ymale4" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_M_4.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "ymale5" src ="/gangster_proj/resources/avatars/yakuza/Yakuza_M_5.png">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="avatar5">
+
+            <div>
+                <h1 class="title-avatar">
+                    Pick your Female Avatar
+                </h1>
+            </div>
+            <div class="container">
+                <form>
+                <div class="avatar-container">
+                    <img id = "afemale1" src ="/gangster_proj/resources/avatars/aryans/AR_Female_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "afemale2" src ="/gangster_proj/resources/avatars/aryans/AR_Female_1.png">
+                </div>
+                </form>
+            </div>
+            <div class="container">
+                <div class="title-avatar"> 
+                    <h1> Pick your Male Avatar</h1>
+                </div>
+                <form>
+                <div class="avatar-container">
+                    <img id = "amale1" src ="/gangster_proj/resources/avatars/aryans/AR_Male_1.png">
+                </div>
+                <div class="avatar-container">
+                    <img id = "amale2" src ="/gangster_proj/resources/avatars/aryans/AR_Male_2.png">
+                </div>
+                </form>
+            </div>
+        </div>
+
+        </div>
+
         <div class="back-to-landing">
-            <button class="btn">Cancel Registration</button>
+            <button class="btn" onclick="window.location.href='/gangster_proj/landing/landing.html'">Cancel
+                Registration</button>
         </div>
     </div>
 </body>

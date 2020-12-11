@@ -12,7 +12,8 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/1cdfb820ae.js"></script>
-    <link rel="stylesheet" href="/landing-page/landing.css" />
+    <link rel="stylesheet" href="./landing.css" type="text/css"/>
+    <script src="landing.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -27,21 +28,15 @@
                     <div class="sign-in">
                         <form class="sign-in-form">
                             <div class="sign-in-field">
-                                <label class="sign-in-label">StreetName: </label>
-                                <input class="sign-in-input" type="text" placeholder="Street Name" field="*{streetName}"/>
-                                <span th:if="${#fields.hasErrors('streetName')}" th:errors="*{streetName}">
-                                <!--E-mail field error messages-->
-                                </span>
+                                <label class="sign-in-label">Gangster ID: </label>
+                                <input id="id-input" class="sign-in-input" type="text" placeholder="Gangster ID"/>
                             </div>
                             <div class="sign-in-field">
                                 <label class="sign-in-label">Password: </label>
-                                <input class="sign-in-input" type="text" placeholder="Password" field="*{password}"/>
-                                <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
-                                <!--E-mail field error messages-->
-                                </span>
+                                <input id="password-input" class="sign-in-input" type="text" placeholder="Password"/>
                             </div>
                             <div>
-                                <input class="submit-btn" type="submit" value="Sign In">
+                                <button id="sign-in" class="btn">Sign In</button>
                             </div>
                         </form>
                     </div>
@@ -50,7 +45,7 @@
             <div class="rightside">
                 <div class="col-lg-8">
                     <div class="sign-up">
-                        <button class="btn">Sign Up</button>
+                        <button id="sign-up" class="btn" onclick= "window.location.href='/gangster_proj/register/register.html'">Sign Up</button>
                     </div>
                 </div>
             </div>

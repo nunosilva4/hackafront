@@ -2,8 +2,7 @@
 $(document).ready(function () {
 
     $('#sign-in').click(signInClick());
-    $('#crew-btn').click(btnclick());
-    $("#mugbtn").click(mugbtnclick());
+    //$('#sign-up').click(signUpClick());
 });
 
 function signInClick() {
@@ -39,35 +38,4 @@ function authenticate(gangster) {
     } 
         
     location.reload();
-}
-
-function mugbtnclick() {
-
-    return function(event) {
-
-        event.preventDefault();
-        return window.location.href="/gangster_proj/choose-mission/choose-mission.html";
-    }
-
-}
-
-function btnclick() {
-
-    return function(event) {
-
-        event.preventDefault();
-        return window.location.href="/gangster_proj/crew-profile/crew-profile.html";
-    }
-}
-
-
-
-function hideFromPopo() {
-
-    $("#").click(fadeContainer);
-
-}
-
-function fadeContainer() {
-    document.getElementById("container").style.animation = "fade in";
 }

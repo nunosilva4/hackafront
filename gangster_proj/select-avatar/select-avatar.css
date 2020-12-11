@@ -1,0 +1,21 @@
+.container {
+
+    width: 100%;
+    margin: 10px;
+    background: #f2f2f2;
+    overflow: auto;
+}
+
+.title-avatar {
+
+    text-align: center;
+}
+
+.avatar-container {
+
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 240px;
+}
